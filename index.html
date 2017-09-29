@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>NYT Search</title>
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
+</head>
+<body>
+<style type="text/css">
+	.display{text-align: center; font-family: white; font-color: #ffffff; }
+	
+	.jumbotron{background-color: darkblue; color: white; margin-left: 10px; margin-right: 10px; margin-top: 5px}
+	
+	.results{width: 300px;}
+
+	.inputs {margin-left: 20px}
+
+	.button{margin-left: 20px}
+
+	.results{width: 100%; border: 2px solid black; }
+</style>
+<script
+  src="https://code.jquery.com/jquery-3.2.1.js"
+  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+  crossorigin="anonymous"></script>
+<div class="jumbotron">
+	
+	<h1 class="display">New York Times Search</h1>
+</div>
+<div class=inputs>
+	
+
+<div>
+	<form>
+		<p>Search Term: </p><input type="text" id=input1>
+	</form>
+</div>
+<br>
+<div>
+	<form>
+		<p>Number of Results: </p><input type="text" id=input2>
+	</form>
+</div>
+<br>
+<div>
+	<form>
+		<p>Start Year: </p><input type="text" id=input3>
+	</form>
+</div>
+<br>
+<div>
+	<form>
+		<p>End Year: </p><input type="text" id=input4>
+	</form>
+	</div>
+</div>
+<br>
+
+<div class="button">
+	<button id="search" type="button" class="btn btn-primary">Search</button>
+	<button id="clear" type="button" class="btn btn-primary">Clear Results</button>
+</div>
+<br>
+<div class="results">
+	<p>Results: </p>
+</div>
+
+
+</body>
+</html>

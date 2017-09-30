@@ -7,7 +7,6 @@ var endYear ='';
 
 $('#search').on('click', function () {
 
-
 	query = $('#input1').val();
 	numResults = $('#input2').val();
 	startYear = $('#input3').val();
@@ -32,12 +31,21 @@ $('#search').on('click', function () {
 	  'begin_date': startYear,
 	  'end_date': endYear
 	});
+	console.log(queryURL);
 
 	$.ajax({
 		url: queryURL,
 		method: 'GET'
 	}).done(function (response) {
-		console.log(response.response.docs);
+		var results = response.response.docs;
+		for (var i = 0; i<numResults; i++) {
+			var h1 = $('<h1>');
+			console.log(response);
+			
+			h1.text(results[i].headline.main)
+			console.log('h1: ',h1);
+			$('.results').append(h1);
+		}
 		// for (var i = 0; i< response)
 	});
 });
